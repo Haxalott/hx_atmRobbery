@@ -1,12 +1,11 @@
-- hx_MeterRobbery -
-A robbery script to rob parking ATM's
+- hx_atmRobbery -
+A robbery script to rob ATM's
 
 Dependencies --
 1. ox_inventory
 2. ox_lib
 3. ox_target
-4. ESX
-5. cd_dispatch
+4. cd_dispatch (optional)
 
 Install --
 1. Add the following;
