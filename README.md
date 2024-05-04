@@ -6,6 +6,7 @@ Dependencies --
 2. ox_lib
 3. ox_target
 4. cd_dispatch (optional)
+5. pure-minigames (https://github.com/purescripts-fivem/pure-minigames)
 
 Install --
 1. Add the following;
