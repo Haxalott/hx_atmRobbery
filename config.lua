@@ -13,10 +13,10 @@ Config.Item = 'hacking_laptop'
 
 Config.TargetOptions = {
     Models = {
-        model1 = 'prop_atm_03',
-        model2 = 'prop_fleeca_atm',
-        model3 = 'prop_atm_01',
-        model4 = 'prop_atm_02',
+        `prop_atm_03`,
+        `prop_fleeca_atm`,
+        `prop_atm_01`,
+        `prop_atm_02`,
     },
     Main = {
         TargetIcon = 'fa-solid fa-code',
