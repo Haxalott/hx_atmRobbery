@@ -1,7 +1,7 @@
 local ox_target = exports.ox_target
 local cooldown  = false
 
-exports.ox_target:addModel(Config.TargetOptions.Models.model1,
+exports.ox_target:addModel(Config.TargetOptions.Models,
     {
         label = Config.Lang['target_label'],
         icon = Config.TargetOptions.Main.TargetIcon,
