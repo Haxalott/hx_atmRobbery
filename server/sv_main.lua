@@ -21,17 +21,31 @@ RegisterNetEvent('hx_atmRobbery:server:removeItem', function()
 end)
 
 RegisterNetEvent('hx_atmRobbery:server:addItem', function()
-    local amount  = math.random(Config.MinimumReward,Config.MaxReward)
-    exports.ox_inventory:AddItem(source, Config.Reward, amount)
+    local number  = math.random(Config.MinimumReward,Config.MaxReward)
+    exports.ox_inventory:AddItem(source, Config.Reward, number)
     TriggerClientEvent('ox_lib:notify', source, {
         title       = Config.Lang['notify_title'],
-        description = 'You made '.. amount .. '$',
+        description = 'You made '.. number .. '$',
         type        = 'inform',
         icon        = 'sack-dollar',
         position    = Config.NotifyPos,
-        icon        = Config.NotifyIcon
     })
     local Identifier = GetPlayerIdentifierByType(source, 'discord')
     local name       = GetPlayerName(source)
-    DebugPrint(name ..' Has robbed an ATM for $'.. amount)
+    sendWebhook(16777215, 'ATM Robbery Logs', "**Player Name:** `"..name.."`\n **Discord ID:** `"..Identifier.."`\n **Amount:** "..number..'')
 end)
+
+function sendWebhook(color, name, message)
+    local embed = {
+          {
+              ["color"] = color,
+              ["title"] = "**HX_ATMROBBERY**",
+              ["description"] = message,
+              ["footer"] = {
+                  ["text"] = 'Haxalotts Developments',
+              },
+          }
+      }
+  
+    PerformHttpRequest(Config.Webhook, function(err, text, headers) end, 'POST', json.encode({username = name, embeds = embed}), { ['Content-Type'] = 'application/json' })
+  end
