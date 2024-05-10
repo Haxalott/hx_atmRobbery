@@ -5,6 +5,7 @@ Config.NotifyPos     = 'top-center' --
 Config.NotifyIcon    = 'sack-dollar'
 Config.MinimumReward = 100
 Config.MaxReward     = 10000
+Config.Webhook = 'CHANGE_ME'
 
 Config.NotifyOnCooldownEnd = true -- Notify the player when their cooldown ends?
 Config.CooldownTime        = 60 -- Time in seconds
@@ -23,9 +24,8 @@ Config.TargetOptions = {
     },
 }
 
-
 Config.MinigameOptions = {
-    totalNumbers = 10,
+    totalNumbers = 1,
     seconds = 15,
     timesToChangeNumbers = 4,
     amountOfGames = 1,
