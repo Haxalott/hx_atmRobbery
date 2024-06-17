@@ -1,6 +1,8 @@
 - hx_atmRobbery -
 A robbery script to rob ATM's
 
+join my discord: https://discord.gg/6btSzWVuwb
+
 Dependencies --
 1. ox_inventory
 2. ox_lib
